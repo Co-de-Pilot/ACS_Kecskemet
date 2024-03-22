@@ -30,8 +30,7 @@ body {
   grid-template-areas:
     "HEADER HEADER"
     "NAV LOGO"
-    "MAIN MAIN"
-    "FOOTER FOOTER";
+    "MAINFOOTER MAINFOOTER";
   min-width: 330px;
   background: var(--color-white);
 }
@@ -187,10 +186,20 @@ nav .menu li a:hover {
 }
 
 /* ----------------------------- */
+/* A MAIN-FOOTER beállítása      */
+/* ----------------------------- */
+.main-footer-wrapper {
+  grid-area: MAINFOOTER;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----------------------------- */
 /* A MAIN elemeinek beállítása    */
 /* ----------------------------- */
 main {
-  grid-area: MAIN;
   z-index: 3;
   padding: 5%;
 }
@@ -199,7 +208,6 @@ main {
 /* A FOOTER elemeinek beállítása    */
 /* ----------------------------- */
 footer {
-  grid-area: FOOTER;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,8 +216,8 @@ footer {
   min-width: 330px;
   z-index: 8;
   padding: 0.5rem;
-  position: fixed;
-  bottom: 0;
+  position: sticky;
+  bottom: 0.5rem;
 }
 .social_media {
   display: flex;
@@ -295,8 +303,7 @@ body > span::before {
       "HEADER HEADER"
       "NAV NAV"
       "LOG LOGO"
-      "MAIN MAIN"
-      "FOOTER FOOTER";
+      "MAINFOOTER MAINFOOTER";
   }
   nav {
     width: calc(100% - 1rem);
